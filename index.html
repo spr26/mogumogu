@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="photos/favicon.JPG" />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seth ❤️ Riya</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Seth & Riya</h1>
+      <p id="quote">Our journey, our love, our forever 🌸</p>
+      <a href="#gallery" class="scroll-btn">View Memories ↓</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      It started with a spark and turned into a story worth telling. Here's to us — the laughter, the adventures, the quiet moments, and everything in between. Welcome to our little corner of forever.
+    </p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Our Memories</h2>
+    <div class="photo-grid">
+      <div class="photo-card"><img src="photos/photo1.jpg" alt="Us 1" /></div>
+      <div class="photo-card"><img src="photos/photo2.jpg" alt="Us 2" /></div>
+      <div class="photo-card"><img src="photos/photo3.jpg" alt="Us 3" /></div>
+      <div class="photo-card"><img src="photos/photo4.jpg" alt="Us 4" /></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Seth for Riya | &copy; 2025</p>
+  </footer>
+
+  <script>
+    const quotes = [
+      "You're my today and all of my tomorrows 💘",
+      "Every love story is beautiful, but ours is my favorite.",
+      "With you, every moment is a fairy tale 💫",
+      "I still get butterflies every time I see you 🦋"
+    ];
+
+    let i = 0;
+    const quoteEl = document.getElementById("quote");
+
+    setInterval(() => {
+      quoteEl.classList.remove("fade-in");
+      void quoteEl.offsetWidth; // trigger reflow
+      quoteEl.textContent = quotes[i = (i + 1) % quotes.length];
+      quoteEl.classList.add("fade-in");
+    }, 4000);
+  </script>
+</body>
+</html>
